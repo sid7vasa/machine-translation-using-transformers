@@ -1,11 +1,12 @@
+import sys
+sys.path.append(r"C:\Users\santo\workspace\machine-translation-using-transformers")
 import tensorflow as tf
 from utils.dataset import load_datasets
 from utils.helper import masked_loss, masked_accuracy, CustomSchedule
 from models.transformer import Transformer
 
 if __name__=="__main__":
-    import sys
-    sys.path.append(r"C:\Users\santo\workspace\machine-translation-using-transformers")
+
     num_layers = 4
     d_model = 128
     dff = 512
@@ -35,4 +36,6 @@ if __name__=="__main__":
     transformer.fit(train_batches,
                 epochs=20,
                 validation_data=val_batches)
+
+    transformer.save("transformer.h5")
 
