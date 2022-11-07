@@ -1,0 +1,10 @@
+project_dir: r"C:\Users\santo\workspace\machine-translation-using-transformers"
+dataset:
+    data_dir:
+        input: 'C:\Users\santo\workspace\machine-translation-using-transformers\data\small_vocab_en'
+        output: 'C:\Users\santo\workspace\machine-translation-using-transformers\data\small_vocab_fr'
+    batch_size: 10
+    data_size: 137860
+embedding:
+    glove: 'C:\Users\santo\workspace\machine-translation-using-transformers\LF\glove.6B\glove.6B.50d.txt'
+visualize: true
